@@ -20,6 +20,7 @@
 }
 
 .btn{
+  cursor: pointer;
   font-size: 35px;
   background-color: #FFCA00;
   margin: 110px 200px 0 200px;
@@ -41,9 +42,12 @@
   text-align: center;
   border-radius: 20px;
   border: 2px solid #51515c;
-  filter: drop-shadow(1px 2px 5px #51515c);
+  filter: drop-shadow(0.5px 1px 2.5px #51515c);
 }
-
+.cards:hover{
+  filter: drop-shadow(3px 6px 15px #51515c);
+  cursor: pointer;
+}
 .sub-menu {
   width:85%;
   height: 100%;
@@ -55,6 +59,7 @@
 .img{
   width: 200px;
   height: 100px;
+  object-fit: cover;
   margin-bottom: 15px;
   border:1px solid #51515c;
   border-radius: 5px;
@@ -95,3 +100,5 @@ h1{
   font: 30px Arial, Helvetica, sans-serif;
   padding-right: 40px;
 }
+
+

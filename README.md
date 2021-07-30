@@ -1,3 +1,5 @@
+[Live Preview](https://country-app-nmerveb.netlify.app/)
+
 ### Ülke Listesi / Istatistikleri Uygulaması
 
 - Lütfen bu uygulamanızı React kullanarak yapın.
