@@ -2,10 +2,21 @@ import Countries from "./components/Countries";
 import Statistics from "./components/Statistics";
 
 import './App.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
  const [ data, setData]= useState("countries");
+ const [countries, setCountries] = useState([]);
+ 
+ //get api's data
+ useEffect(()=>{
+     fetch("https://restcountries.eu/rest/v2/all")
+       .then((res) => res.json())
+       .then((data) => {
+         setCountries(data);     
+       });
+ },[])
+ 
   return (
     <div className="App">     
       <div className="menu">
@@ -17,7 +28,7 @@ function App() {
         </span>
       </div>
       <div>
-         {(data=="countries")?<Countries/>:<Statistics/>}
+         {(data==="countries")?<Countries countries={countries}/>:<Statistics countries={countries}/>}
       </div>
 
     </div>
